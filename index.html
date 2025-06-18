@@ -1,26 +1,83 @@
-<<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Static Link Page</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global styles from your original request */
+    body {
+      background-color: #01489b;
+      color: #ffffff; /* Default text color for body */
+      font-family: sans-serif; /* A common, readable font */
+      padding: 20px; /* Add some padding around the content */
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 2.5em; /* Larger heading */
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #198c6e;
+      font-size: 1.8em; /* Slightly smaller heading */
+      margin-bottom: 25px;
+    }
+
+    /* Styles for the links to look like buttons */
+    .button-link {
+      display: inline-block; /* Allows setting width, padding, etc. */
+      background-color: #3498db; /* A nice blue button color */
+      color: white; /* White text for contrast */
+      padding: 10px 20px; /* Padding inside the button */
+      margin-bottom: 10px; /* Space between buttons */
+      text-decoration: none; /* Remove underline from links */
+      border-radius: 5px; /* Slightly rounded corners */
+      font-weight: bold; /* Bold text */
+      transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    }
+
+    .button-link:hover {
+      background-color: #2980b9; /* Darker blue on hover */
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+    }
+
+    /* Styles for different button colors */
+    .button-blue { background-color: #3498db; }
+    .button-blue:hover { background-color: #2980b9; }
+
+    .button-green { background-color: #27ae60; }
+    .button-green:hover { background-color: #229954; }
+
+    .button-purple { background-color: #9b59b6; }
+    .button-purple:hover { background-color: #8e44ad; }
+
+    .button-red { background-color: #e74c3c; }
+    .button-red:hover { background-color: #c0392b; }
+
+    .button-orange { background-color: #f39c12; }
+    .button-orange:hover { background-color: #d68910; }
+
+    .button-gray { background-color: #7f8c8d; }
+    .button-gray:hover { background-color: #626f70; }
+
+  </style>
 </head>
-</body>
-</html>
-<html>
-<body style="background-color:#01489b;">
-<h1 style="color:#ffffff">Information and website linkage platform</h1>
-<h2 style="color:#198c6e>The following are hyperlinks to important websites</h2>
-<p><a href=""></a><p>
-<p><a href="https://github.com/NUSHDev">NUSHDev</a></p>
-<p><a href="https://www.edmundoptics.com/knowledge-center/application-notes/optics/optics-101-level-1-theoretical-foundations">Optics 101</a></p>
-<p><a href="https://github.com/NZX37/python-deploy">NZX37</a></p>
-<p><a href="https://forms.office.com/Pages/DesignPageV2.aspx?analysis=false&prevsubpage=design">Forms</a></p>
-<p><a href="https://www.youtube.com/watch?v=Mv54UfwYYos">Fusion 360 Day 7</a></p>
-<p><a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics/xf557a762645cccc5:mathematical-models-of-motion/e/freefall-exercise-ap1-graphs-and-concepts">Khan Academy</a></p>
-<p><a href="https://drive.google.com/file/d/18MN5UY4VZu91kV93iTefEV-bMPp2YsLN/view">Physics text</a></p>
-<p><a href="https://sgphysicsleague.org/archives/2024/solutions.pdf#Simp">SPhL Archive</a></p>
-<p><a href="https://sgphysicsleague.org/data_sheet.pdf">SPhL Data Sheet</a></p>
-<p><a href="https://sgphysicsleague.org/problems">SPhL Website</a></p>
-<p><a href="https://imagecolorpicker.com/color-code/01489b">Color Picker</a></p>
+<body>
+  <h1>Information and website linkage platform</h1>
+  <h2>The following are hyperlinks to important websites</h2>
+
+  <p><a href="#" class="button-link button-blue">Empty Link</a></p>
+  <p><a href="https://github.com/NUSHDev" class="button-link button-green">NUSHDev</a></p>
+  <p><a href="https://www.edmundoptics.com/knowledge-center/application-notes/optics/optics-101-level-1-theoretical-foundations" class="button-link button-purple">Optics 101</a></p>
+  <p><a href="https://github.com/NZX37/python-deploy" class="button-link button-red">NZX37</a></p>
+  <p><a href="https://forms.office.com/Pages/DesignPageV2.aspx?analysis=false&prevsubpage=design" class="button-link button-orange">Forms</a></p>
+  <p><a href="https://www.youtube.com/watch?v=Mv54UfwYYos" class="button-link button-blue">Fusion 360 Day 7</a></p>
+  <p><a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics/xf557a762645cccc5:mathematical-models-of-motion/e/freefall-exercise-ap1-graphs-and-concepts" class="button-link button-green">Khan Academy</a></p>
+  <p><a href="https://drive.google.com/file/d/18MN5UY4VZu91kV93iTefEV-bMPp2YsLN/view" class="button-link button-purple">Physics text</a></p>
+  <p><a href="https://sgphysicsleague.org/archives/2024/solutions.pdf#Simp" class="button-link button-red">SPhL Archive</a></p>
+  <p><a href="https://sgphysicsleague.org/data_sheet.pdf" class="button-link button-orange">SPhL Data Sheet</a></p>
+  <p><a href="https://sgphysicsleague.org/problems" class="button-link button-blue">SPhL Website</a></p>
+  <p><a href="https://imagecolorpicker.com/color-code/01489b" class="button-link button-green">Color Picker</a></p>
 </body>
 </html>
