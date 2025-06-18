@@ -1,80 +1,116 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Static Link Page</title>
-  <style>
-    body {
-      background-color: #000000;
-      color: #ffffff; 
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 20px;
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Configure Tailwind to use a custom font (Inter) and custom colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'], // Set Inter as the default sans-serif font
+          },
+          colors: {
+            // Custom colors based on the original design
+            'deep-blue-bg': '#01489b',
+            'nav-blue': '#012f6b',
+            'highlight-green': '#198c6e',
+            'link-box-blue': '#035fcf',
+            'light-blue-text': '#cfe8ff',
+          }
+        }
+      }
     }
-
-    h1 {
-      color: #ffffff;
-      font-size: 2.5em; 
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      color: #a8caff;
-      font-size: 1.8em; 
-      margin-bottom: 25px;
-    }
-
-    .button-link {
-      display: inline-block; /* Allows setting width, padding, etc. */
-      background-color: #3498db; /* A nice blue button color */
-      color: white; 
-      padding: 10px 20px; 
-      margin-bottom: 10px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold; 
-      transition: background-color 0.5s ease;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .button-link:hover {
-      background-color: #2980b9; 
-      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    .button-blue { background-color: #3498db; }
-    .button-blue:hover { background-color: #2980b9; }
-
-    .button-green { background-color: #27ae60; }
-    .button-green:hover { background-color: #229954; }
-
-    .button-purple { background-color: #9b59b6; }
-    .button-purple:hover { background-color: #8e44ad; }
-
-    .button-red { background-color: #e74c3c; }
-    .button-red:hover { background-color: #c0392b; }
-
-    .button-orange { background-color: #f39c12; }
-    .button-orange:hover { background-color: #d68910; }
-
-    .button-gray { background-color: #7f8c8d; }
-    .button-gray:hover { background-color: #626f70; }
-
-  </style>
+  </script>
+  <!-- Optional: Google Fonts for Inter, if not already provided by the environment -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <h1>Information and website linkage platform</h1>
-  <h2>The following are hyperlinks to important websites :)</h2>
 
-  <p><a href="#" class="button-link button-blue">Empty Link</a></p>
-  <p><a href="https://github.com/NUSHDev" class="button-link button-green">NUSHDev</a></p>
-  <p><a href="https://www.edmundoptics.com/knowledge-center/application-notes/optics/optics-101-level-1-theoretical-foundations" class="button-link button-purple">Optics 101</a></p>
-  <p><a href="https://github.com/NZX37/python-deploy" class="button-link button-red">NZX37</a></p>
-  <p><a href="https://forms.office.com/Pages/DesignPageV2.aspx?analysis=false&prevsubpage=design" class="button-link button-orange">Forms</a></p>
-  <p><a href="https://www.youtube.com/watch?v=Mv54UfwYYos" class="button-link button-blue">Fusion 360 Day 7</a></p>
-  <p><a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics/xf557a762645cccc5:mathematical-models-of-motion/e/freefall-exercise-ap1-graphs-and-concepts" class="button-link button-green">Khan Academy</a></p>
-  <p><a href="https://drive.google.com/file/d/18MN5UY4VZu91kV93iTefEV-bMPp2YsLN/view" class="button-link button-purple">Physics text</a></p>
-  <p><a href="https://sgphysicsleague.org/archives/2024/solutions.pdf#Simp" class="button-link button-red">SPhL Archive</a></p>
-  <p><a href="https://sgphysicsleague.org/data_sheet.pdf" class="button-link button-orange">SPhL Data Sheet</a></p>
-  <p><a href="https://sgphysicsleague.org/problems" class="button-link button-blue">SPhL Website</a></p>
-  <p><a href="https://imagecolorpicker.com/color-code/01489b" class="button-link button-green">Color Picker</a></p>
+<body class="font-sans min-h-screen bg-deep-blue-bg text-white antialiased">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-nav-blue p-4 flex flex-col md:flex-row items-start md:items-center shadow-lg rounded-b-lg">
+    <h1 class="text-2xl font-bold flex-grow mb-2 md:mb-0">Link Hub</h1>
+    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-5">
+      <a href="#optics" class="text-white hover:underline font-bold rounded-md px-3 py-1 transition duration-300 ease-in-out">Optics</a>
+      <a href="#physics" class="text-white hover:underline font-bold rounded-md px-3 py-1 transition duration-300 ease-in-out">Physics</a>
+      <a href="#dev" class="text-white hover:underline font-bold rounded-md px-3 py-1 transition duration-300 ease-in-out">Dev</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <div class="container mx-auto p-6 max-w-4xl">
+    <h2 class="text-highlight-green text-3xl font-extrabold mb-6 text-center md:text-left">The following are hyperlinks to important websites</h2>
+
+    <!-- Link Box - NUSHDev -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1" id="dev">
+      <a href="https://github.com/NUSHDev" class="text-white text-xl font-bold underline hover:no-underline block mb-1">NUSHDev</a>
+      <p class="mt-1 text-light-blue-text text-base">A super cool dev company run by 11gohjy!!</p>
+    </div>
+
+    <!-- Link Box - NZX37 -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://github.com/NZX37/python-deploy" class="text-white text-xl font-bold underline hover:no-underline block mb-1">NZX37</a>
+      <p class="mt-1 text-light-blue-text text-base">A member of NUSHdev who realises he needs to start getting better at html and use more github!!!</p>
+    </div>
+
+    <!-- Link Box - Optics 101 -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1" id="optics">
+      <a href="https://www.edmundoptics.com/knowledge-center/application-notes/optics/optics-101-level-1-theoretical-foundations" class="text-white text-xl font-bold underline hover:no-underline block mb-1">Optics 101</a>
+      <p class="mt-1 text-light-blue-text text-base">List of topics for optics that make my eyes burn</p>
+    </div>
+
+    <!-- Link Box - Forms -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://forms.office.com/Pages/DesignPageV2.aspx?analysis=false&prevsubpage=design" class="text-white text-xl font-bold underline hover:no-underline block mb-1">Forms</a>
+      <p class="mt-1 text-light-blue-text text-base">Microsoft forms, for making forms, esp useful for bfb</p>
+    </div>
+
+    <!-- Link Box - Fusion 360 Day 7 -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://www.youtube.com/watch?v=Mv54UfwYYos" class="text-white text-xl font-bold underline hover:no-underline block mb-1">Fusion 360 Day 7</a>
+      <p class="mt-1 text-light-blue-text text-base">Kevin's Fusion 360 stuff</p>
+    </div>
+
+    <!-- Link Box - Khan Academy -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1" id="physics">
+      <a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics/xf557a762645cccc5:mathematical-models-of-motion/e/freefall-exercise-ap1-graphs-and-concepts" class="text-white text-xl font-bold underline hover:no-underline block mb-1">Khan Academy</a>
+      <p class="mt-1 text-light-blue-text text-base">Random course</p>
+    </div>
+
+    <!-- Link Box - Physics Text -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://drive.google.com/file/d/18MN5UY4VZu91kV93iTefEV-bMPp2YsLN/view" class="text-white text-xl font-bold underline hover:no-underline block mb-1">Physics Text</a>
+      <p class="mt-1 text-light-blue-text text-base">Pay this link no mind whatsoever</p>
+    </div>
+
+    <!-- Link Box - SPhL Archive -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://sgphysicsleague.org/archives/2024/solutions.pdf#Simp" class="text-white text-xl font-bold underline hover:no-underline block mb-1">SPhL Archive</a>
+      <p class="mt-1 text-light-blue-text text-base">2024 Singapore Physics League archive of solution documents.</p>
+    </div>
+
+    <!-- Link Box - SPhL Data Sheet -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://sgphysicsleague.org/data_sheet.pdf" class="text-white text-xl font-bold underline hover:no-underline block mb-1">SPhL Data Sheet</a>
+      <p class="mt-1 text-light-blue-text text-base">Singapore Physics League competition data sheet (PDF format).</p>
+    </div>
+
+    <!-- Link Box - SPhL Website -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://sgphysicsleague.org/problems" class="text-white text-xl font-bold underline hover:no-underline block mb-1">SPhL Website</a>
+      <p class="mt-1 text-light-blue-text text-base">Main problems page of the Singapore Physics League site.</p>
+    </div>
+
+    <!-- Link Box - Color Picker -->
+    <div class="link-box bg-link-box-blue p-5 my-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+      <a href="https://imagecolorpicker.com/color-code/01489b" class="text-white text-xl font-bold underline hover:no-underline block mb-1">Color Picker</a>
+      <p class="mt-1 text-light-blue-text text-base">Tool for selecting and inspecting web colors.</p>
+    </div>
+  </div>
 </body>
 </html>
